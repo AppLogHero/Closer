@@ -52,7 +52,7 @@ struct StoryItem: View {
                             image
                                 .foregroundStyle(.white)
                         }
-                        .frame(width: 54, height: 54)
+                        .frame(width: 52, height: 52)
                         .foregroundStyle(
                             LinearGradient(
                                 colors: [.lightRed, .impactYellow],

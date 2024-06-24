@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BarButtonItem: View {
-    
+    let id: UUID = UUID()
     private let icon: Image
     private let action: () -> Void
     
@@ -18,9 +18,12 @@ struct BarButtonItem: View {
     }
     
     var body: some View {
-        icon
-            .padding(.all, 16)
-            .clipShape(Circle())
+        ZStack {
+            Circle()
+                .stroke(.gray, lineWidth: 1)
+                .frame(width: 48, height: 48)
+            icon
+        }
     }
 }
 

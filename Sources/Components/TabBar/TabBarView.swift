@@ -26,7 +26,11 @@ struct TabBarView<Content: View>: View {
                 GeometryReader { geometry in
                     ZStack(alignment: .leading) {
                         Circle()
-                            .fill(.red.shadow(.drop(color: .black.opacity(0.6), radius: 2)))
+                            .fill(LinearGradient(
+                                colors: [.lightRed, .impactYellow],
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            ).shadow(.drop(color: .black.opacity(0.6), radius: 2)))
                             .frame(width: clickableZoneWitdh, height: 40)
                             .offset(x: selectedShapePosition)
                         HStack(spacing: 0) {
